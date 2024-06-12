@@ -16,15 +16,15 @@ public class MyController {
     @Autowired
     private MyService myService;
     
-    @GetMapping("/api/postData")
+    @GetMapping("/api/addPost")
     public String testPost() {
         myService.sendPostRequest();
         return "Post Request Sent";
     }
 
-    @GetMapping("/api/getMessage")
-    public String getMethodName() {
-        return myService.getCatBreeds();
+    @GetMapping("/api/getPost")
+    public String getSinglePost() {
+        return myService.getSinglePost();
     }
     
     

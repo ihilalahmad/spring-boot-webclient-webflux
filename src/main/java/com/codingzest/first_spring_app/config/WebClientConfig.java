@@ -10,7 +10,7 @@ public class WebClientConfig {
     @Bean
     public WebClient webClient(){
         return WebClient.builder()
-                        .baseUrl("https://catfact.ninja/")
+                        .baseUrl("https://dummyjson.com/posts/")
                         .build();
     }
 }

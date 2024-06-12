@@ -15,10 +15,10 @@ public class MyService {
     private WebClient webClient;
     
     public void sendPostRequest(){
-        MyRequestModel myRequestModel = new MyRequestModel("Hilal Ahmad", "hilal@gmail.com");
+        MyRequestModel myRequestModel = new MyRequestModel("This is my first post api from SpringBoot", 12);
 
         webClient.post()
-                 .uri("/api/postData")
+                 .uri("add")
                  .body(Mono.just(myRequestModel), MyRequestModel.class)
                  .retrieve()
                  .bodyToMono(String.class)
@@ -28,16 +28,16 @@ public class MyService {
                  });
     }
 
-    public String getCatBreeds(){
-       String catBreeds =  webClient.get()
-                  .uri("breeds")
+    public String getSinglePost(){
+       String singlePost =  webClient.get()
+                  .uri("1")
                   .retrieve()
                   .bodyToMono(String.class)
                   .block();
 
                   System.out.println("----------------");
-                  System.out.println(catBreeds);
+                  System.out.println(singlePost);
 
-                  return catBreeds;
+                  return singlePost;
     }
 }

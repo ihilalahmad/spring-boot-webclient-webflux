@@ -2,27 +2,27 @@ package com.codingzest.first_spring_app.request_models;
 
 public class MyRequestModel {
     
-    private String userName;
-    private String userEmail;
+    private String title;
+    private int userId;
 
-    public MyRequestModel(String userName, String userEmail) {
-        this.userName = userName;
-        this.userEmail = userEmail;
+    public MyRequestModel(String title, int userId) {
+        this.title = title;
+        this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String gettitle() {
+        return title;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void settitle(String title) {
+        this.title = title;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public int getuserId() {
+        return userId;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setuserId(int userId) {
+        this.userId = userId;
     }
 }
